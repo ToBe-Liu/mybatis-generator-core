@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!-- ���ݿ�����-->
+	<classPathEntry	location="mysql-connector-java-5.1.22.jar"/>
+	<context id="DB2Tables"	targetRuntime="org.mybatis.generator.codegen.mybatis3.IntrospectedTableMyBatis3SimpleImpl">
+		<!-- 生成的Java文件的编码 -->
+		<property name="javaFileEncoding" value="UTF-8"/>
+		<commentGenerator>
+			<!-- 生成文件的注释作者 -->
+			<property name="author" value="LiuXingHai"/>
+			<property name="suppressDate" value="true"/>
+			<!-- �Ƿ�ȥ���Զ����ɵ�ע�� true���� �� false:�� -->
+			<property name="suppressAllComments" value="false"/>
+		</commentGenerator>
+		<!--���ݿ�����URL���û��������� -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.1.251:3306/dev_wgj_faceweb" userId="jzkf" password="jzwgjkf">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+		<!-- ����ģ�͵İ�����λ��-->
+		<javaModelGenerator targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true"/>
+		</javaModelGenerator>
+		<plainJavaGenerator type="DAO" targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</plainJavaGenerator>
+		<plainJavaGenerator type="DAOIMPL" targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</plainJavaGenerator>
+		<plainJavaGenerator type="SERVICE" targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</plainJavaGenerator>
+		<plainJavaGenerator type="SERVICEIMPL" targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</plainJavaGenerator>
+		<!-- ����ӳ���ļ��İ�����λ��-->
+		<sqlMapGenerator targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</sqlMapGenerator>
+		<!-- ����DAO�İ�����λ��-->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+		</javaClientGenerator>
+		
+		<!-- Ҫ������Щ��-->
+		<table tableName="share_bounty_detail" domainObjectName="ShareBountyDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		
+	
+		</context>
+</generatorConfiguration>
